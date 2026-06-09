@@ -472,13 +472,31 @@
   3%, 15%   { opacity: 1; color: var(--accent-light); }
 }
 
+@media (max-width: 1024px) {
+  .mg-section { padding: 4.5rem 0; }
+}
+
 @media (max-width: 768px) {
+  .mg-section { padding: 4rem 0; }
   .mg-player { aspect-ratio: 4 / 3; max-height: none; }
   .mg-process-track { flex-wrap: wrap; gap: 1rem; justify-content: center; }
   .mg-process-line { display: none; }
   .mg-step { flex: 0 0 45%; }
   .mg-services-grid { grid-template-columns: repeat(2, 1fr); }
   .mg-step p { display: none; }
+  .mg-controls {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    left: 0.75rem;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .mg-scene { padding: 1.5rem; }
+  .mg-services-grid { grid-template-columns: 1fr; }
+  .mg-step { flex: 0 0 100%; }
+  .mg-time { font-size: 0.65rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

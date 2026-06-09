@@ -138,6 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  document.querySelectorAll('.custom-select').forEach(initCustomSelect);
+
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', e => {
@@ -150,10 +152,77 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.textContent = originalText;
         btn.style.background = '';
         contactForm.reset();
+        contactForm.querySelectorAll('.custom-select').forEach(syncCustomSelect);
       }, 3000);
     });
   }
 });
+
+function initCustomSelect(wrapper) {
+  const select = wrapper.querySelector('select');
+  const trigger = wrapper.querySelector('.custom-select-trigger');
+  const label = trigger.querySelector('.custom-select-label');
+  const menu = wrapper.querySelector('.custom-select-menu');
+
+  if (!select || !trigger || !menu) return;
+
+  menu.innerHTML = '';
+  [...select.options].forEach((opt, i) => {
+    const li = document.createElement('li');
+    li.setAttribute('role', 'option');
+    li.dataset.value = opt.value;
+    li.textContent = opt.textContent;
+    if (i === select.selectedIndex) li.classList.add('selected');
+    li.addEventListener('click', () => setValue(opt.value));
+    menu.appendChild(li);
+  });
+
+  function setValue(value) {
+    select.value = value;
+    const opt = select.options[select.selectedIndex];
+    label.textContent = opt ? opt.textContent : 'Select a service';
+    menu.querySelectorAll('li').forEach(li => {
+      li.classList.toggle('selected', li.dataset.value === value);
+    });
+    close();
+  }
+
+  function open() {
+    wrapper.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+    menu.hidden = false;
+  }
+
+  function close() {
+    wrapper.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+    menu.hidden = true;
+  }
+
+  function toggle() {
+    wrapper.classList.contains('open') ? close() : open();
+  }
+
+  trigger.addEventListener('click', toggle);
+
+  document.addEventListener('click', e => {
+    if (!wrapper.contains(e.target)) close();
+  });
+
+  trigger.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+
+  wrapper._syncCustomSelect = () => setValue(select.value || '');
+}
+
+function syncCustomSelect(wrapper) {
+  if (wrapper._syncCustomSelect) wrapper._syncCustomSelect();
+}
 
 function animateCounters(container) {
   container.querySelectorAll('.stat-item strong, .case-metrics .metric strong').forEach(el => {

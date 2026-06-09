@@ -3,48 +3,238 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Procellari Pvt Ltd - Coming Soon</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #0a0a0f;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-    .container { padding: 2rem; }
-    .logo { font-size: 3rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 0.5rem; }
-    .logo span { color: #6366f1; }
-    .tagline { font-size: 1.1rem; color: #888; margin-bottom: 2.5rem; }
-    h2 { font-size: 2rem; margin-bottom: 1rem; }
-    p { color: #aaa; font-size: 1rem; max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
-    .badge {
-      display: inline-block;
-      background: #6366f1;
-      color: #fff;
-      padding: 0.4rem 1.2rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-    }
-    .contact { font-size: 0.9rem; color: #666; margin-top: 3rem; }
-    .contact a { color: #6366f1; text-decoration: none; }
-  </style>
+  <meta name="description" content="Procellari Pvt Ltd — Premium IT solutions including custom software, cloud, AI, DevOps, and digital transformation.">
+  <title>Procellari — IT Solutions &amp; Digital Transformation</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="logo">Procel<span>lari</span></div>
-    <div class="tagline">Procellari Pvt Ltd &mdash; IT Solutions</div>
-    <div class="badge">Coming Soon</div>
-    <h2>Something Great Is Being Built</h2>
-    <p>We are working hard to bring you an exceptional digital experience. Our team is crafting innovative software, cloud, and technology solutions.</p>
-    <div class="contact">In the meantime, reach us at <a href="mailto:hello@procellari.com">hello@procellari.com</a></div>
-  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Procel<span>lari</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="btn btn-primary nav-cta">Contact Us</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">Trusted IT Solutions Partner</div>
+      <h1>Engineering the <span class="gradient-text">Future</span> of Your Business</h1>
+      <p>Procellari delivers end-to-end technology solutions — from custom software and cloud infrastructure to AI-powered innovation — helping enterprises scale with confidence.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+        <a href="services.html" class="btn btn-outline">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><strong>150+</strong><span>Projects Delivered</span></div>
+        <div class="stat-item"><strong>50+</strong><span>Expert Engineers</span></div>
+        <div class="stat-item"><strong>12+</strong><span>Industries Served</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Comprehensive <span class="gradient-text">Services</span></h2>
+        <p class="section-desc">From ideation to deployment, we provide the full spectrum of technology services your business needs to thrive in the digital age.</p>
+      </div>
+      <div class="card-grid card-grid-3 fade-in">
+        <div class="card">
+          <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-code"></use></svg></div>
+          <h3>Custom Software Development</h3>
+          <p>Tailored applications built to your exact specifications, engineered for performance, scalability, and long-term maintainability.</p>
+          <a href="services.html" class="card-link">Learn more →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-globe"></use></svg></div>
+          <h3>Web Applications</h3>
+          <p>Modern, responsive web platforms using React, Angular, and .NET — delivering seamless user experiences across all devices.</p>
+          <a href="services.html" class="card-link">Learn more →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-mobile"></use></svg></div>
+          <h3>Mobile Apps</h3>
+          <p>Native and cross-platform mobile solutions with Flutter, reaching your customers wherever they are with polished, performant apps.</p>
+          <a href="services.html" class="card-link">Learn more →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-ai"></use></svg></div>
+          <h3>AI Solutions</h3>
+          <p>Intelligent automation, machine learning models, and AI integrations that transform data into actionable business insights.</p>
+          <a href="services.html" class="card-link">Learn more →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-cloud"></use></svg></div>
+          <h3>Cloud Solutions</h3>
+          <p>Scalable cloud architecture on AWS and Azure — migration, optimization, and managed services for peak reliability.</p>
+          <a href="services.html" class="card-link">Learn more →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-devops"></use></svg></div>
+          <h3>DevOps</h3>
+          <p>CI/CD pipelines, containerization with Docker and Kubernetes, and infrastructure automation for faster, safer releases.</p>
+          <a href="services.html" class="card-link">Learn more →</a>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2.5rem;" class="fade-in">
+        <a href="services.html" class="btn btn-ghost">View All Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt-bg">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Stack</span>
+        <h2 class="section-title">Technologies We <span class="gradient-text">Master</span></h2>
+        <p class="section-desc">We leverage battle-tested technologies to build robust, future-proof solutions.</p>
+      </div>
+      <div class="tech-grid fade-in">
+        <div class="tech-badge"><span class="dot"></span>.NET</div>
+        <div class="tech-badge"><span class="dot"></span>Node.js</div>
+        <div class="tech-badge"><span class="dot"></span>Angular</div>
+        <div class="tech-badge"><span class="dot"></span>React</div>
+        <div class="tech-badge"><span class="dot"></span>Flutter</div>
+        <div class="tech-badge"><span class="dot"></span>PostgreSQL</div>
+        <div class="tech-badge"><span class="dot"></span>MongoDB</div>
+        <div class="tech-badge"><span class="dot"></span>AWS</div>
+        <div class="tech-badge"><span class="dot"></span>Azure</div>
+        <div class="tech-badge"><span class="dot"></span>Docker</div>
+        <div class="tech-badge"><span class="dot"></span>Kubernetes</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">How We Work</span>
+        <h2 class="section-title">Our <span class="gradient-text">Process</span></h2>
+        <p class="section-desc">A proven methodology that ensures transparency, quality, and on-time delivery at every stage.</p>
+      </div>
+      <div class="process-grid fade-in">
+        <div class="process-step">
+          <h4>Discover</h4>
+          <p>Deep-dive into your goals, challenges, and requirements to craft the right strategy.</p>
+        </div>
+        <div class="process-step">
+          <h4>Design</h4>
+          <p>Architecture blueprints, UX prototypes, and technical specifications aligned to your vision.</p>
+        </div>
+        <div class="process-step">
+          <h4>Develop</h4>
+          <p>Agile sprints with continuous integration, code reviews, and rigorous quality assurance.</p>
+        </div>
+        <div class="process-step">
+          <h4>Deliver</h4>
+          <p>Deployment, monitoring, and ongoing support to ensure lasting success and growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt-bg">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Client Voices</span>
+        <h2 class="section-title">What Our <span class="gradient-text">Clients</span> Say</h2>
+      </div>
+      <div class="card-grid card-grid-3 fade-in">
+        <div class="testimonial-card">
+          <blockquote>"Procellari transformed our legacy systems into a modern cloud-native platform. Their team's expertise and dedication exceeded every expectation."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">RK</div>
+            <div class="author-info"><strong>Rajesh Kumar</strong><span>CTO, FinEdge Solutions</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>"The AI-powered analytics dashboard they built gave us insights we never had before. Delivery was on time and the code quality was outstanding."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">SP</div>
+            <div class="author-info"><strong>Sarah Patel</strong><span>VP Engineering, HealthSync</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>"Their DevOps transformation reduced our deployment time by 80%. Procellari is a true technology partner, not just a vendor."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div class="author-info"><strong>Ahmed Malik</strong><span>Director, LogiFlow Global</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container fade-in">
+      <div class="cta-banner">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Let's discuss how Procellari can help you achieve your technology goals. Get a free consultation with our experts today.</p>
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Procel<span>lari</span></a>
+          <p>Procellari Pvt Ltd delivers premium IT solutions — custom software, cloud, AI, and digital transformation for enterprises worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="careers.html">Careers</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Custom Software</a>
+          <a href="services.html">Cloud Solutions</a>
+          <a href="services.html">AI Solutions</a>
+          <a href="services.html">DevOps</a>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="industries.html">Industries</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Procellari Pvt Ltd. All rights reserved.</span>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

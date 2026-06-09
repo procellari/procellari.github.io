@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('loaded');
   });
 
+  initCookieBanner();
+
   const navbar = document.querySelector('.navbar');
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -70,6 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (info) info.classList.add('fade-in-left');
     if (form) form.classList.add('fade-in-right');
   }
+
+  document.querySelectorAll('.legal-content').forEach(el => {
+    el.classList.add('visible');
+  });
 
   const animatedSelectors = '.fade-in, .fade-in-left, .fade-in-right, .scale-in, .stagger-children';
   const animatedElements = document.querySelectorAll(animatedSelectors);
@@ -275,4 +281,34 @@ function animateCounters(container) {
 
     requestAnimationFrame(tick);
   });
+}
+
+function initCookieBanner() {
+  if (localStorage.getItem('cookie-consent')) return;
+
+  const banner = document.createElement('div');
+  banner.className = 'cookie-banner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-label', 'Cookie notice');
+  banner.innerHTML = `
+    <div class="cookie-banner-inner">
+      <p>We use essential and analytics cookies to operate and improve procellari.com. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</p>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-outline cookie-decline">Decline</button>
+        <button type="button" class="btn btn-primary cookie-accept">Accept</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(banner);
+  requestAnimationFrame(() => banner.classList.add('show'));
+
+  const dismiss = (value) => {
+    localStorage.setItem('cookie-consent', value);
+    banner.classList.remove('show');
+    setTimeout(() => banner.remove(), 400);
+  };
+
+  banner.querySelector('.cookie-accept').addEventListener('click', () => dismiss('accepted'));
+  banner.querySelector('.cookie-decline').addEventListener('click', () => dismiss('declined'));
 }

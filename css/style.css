@@ -218,13 +218,32 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   flex-shrink: 0;
+  white-space: nowrap;
 }
-.logo span { color: var(--accent-light); }
+
+.logo-name {
+  display: inline-block;
+  letter-spacing: -0.03em;
+}
+
+.logo-accent {
+  color: var(--accent-light);
+}
+
+.logo-mark {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: block;
+}
 
 .nav-links {
   display: flex;
@@ -393,10 +412,47 @@ h4 { font-size: 1rem; font-weight: 600; }
   animation: gridDrift 30s linear infinite;
 }
 
-.hero-content {
+.hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 960px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 560px;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: clamp(320px, 42vh, 520px);
+  padding: 1rem;
+  overflow: visible;
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+body.loaded .hero-visual {
+  animation: heroReveal 1s var(--ease-out-expo) 0.45s forwards;
+}
+
+.hero-logo {
+  width: min(100%, 560px);
+  height: auto;
+  filter: drop-shadow(0 0 100px rgba(30, 144, 255, 0.28));
+  animation: heroLogoFloat 8s ease-in-out infinite;
+}
+
+@keyframes heroLogoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
 }
 
 .hero-content h1 {
@@ -2146,7 +2202,7 @@ body.loaded .page-header p {
   }
 
   .fade-in, .fade-in-left, .fade-in-right, .scale-in,
-  .stagger-children > *, .hero-content > *,
+  .stagger-children > *, .hero-content > *, .hero-visual,
   .page-header .section-label, .page-header h1, .page-header p {
     opacity: 1;
     transform: none;
@@ -2257,6 +2313,22 @@ body.loaded .page-header p {
     padding-bottom: 3rem;
   }
 
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-visual {
+    order: -1;
+    max-width: 380px;
+    min-height: 280px;
+    margin: 0 auto;
+  }
+
+  .hero-logo {
+    width: 100%;
+  }
+
   .hero-content h1 {
     font-size: clamp(2.25rem, 9vw, 3.25rem);
     margin-bottom: 1.5rem;
@@ -2355,6 +2427,11 @@ body.loaded .page-header p {
   .container { padding: 0 1rem; }
 
   .logo { font-size: 1.2rem; }
+
+  .logo-mark {
+    width: 44px;
+    height: 44px;
+  }
 
   .hero-badge {
     font-size: 0.62rem;

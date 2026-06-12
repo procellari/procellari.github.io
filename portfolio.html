@@ -10,11 +10,11 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Procellari portfolio — featured projects across finance, healthcare, retail, logistics, and SaaS.">
+  <meta name="description" content="Procellari portfolio — URL shortener with custom links and click tracking.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Procellari">
-  <meta property="og:title" content="Portfolio — Procellari">
-  <meta property="og:description" content="Procellari portfolio — featured projects across finance, healthcare, retail, logistics, and SaaS.">
+  <meta property="og:title" content="Portfolio — Procellari URL Shortener">
+  <meta property="og:description" content="Procellari portfolio — URL shortener with custom links and click tracking.">
   <meta property="og:url" content="https://procellari.com/portfolio.html">
   <meta property="og:image" content="https://procellari.com/og-image.png">
   <meta property="og:image:width" content="476">
@@ -23,10 +23,10 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="Procellari logo">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Portfolio — Procellari">
-  <meta name="twitter:description" content="Procellari portfolio — featured projects across finance, healthcare, retail, logistics, and SaaS.">
+  <meta name="twitter:title" content="Portfolio — Procellari URL Shortener">
+  <meta name="twitter:description" content="Procellari portfolio — URL shortener with custom links and click tracking.">
   <meta name="twitter:image" content="https://procellari.com/og-image.png">
-  <title>Portfolio — Procellari</title>
+  <title>Portfolio — Procellari URL Shortener</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -54,101 +54,47 @@
   <header class="page-header">
     <div id="particles-header" class="particles-bg" aria-hidden="true"></div>
     <div class="container">
-      <span class="section-label">Our Work</span>
-      <h1>Project <span class="gradient-text">Portfolio</span></h1>
-      <p>A showcase of solutions we've engineered for clients across industries — each built with precision, scalability, and impact in mind.</p>
+      <span class="section-label">Our product</span>
+      <h1>URL <span class="gradient-text">shortener</span></h1>
+      <p>Long links in, short links out. Click counts included. Built in-house at Procellari.</p>
     </div>
   </header>
 
   <section>
     <div class="container">
-      <div class="filter-tabs fade-in">
-        <button class="filter-tab active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="finance">Finance</button>
-        <button class="filter-tab" data-filter="health">Healthcare</button>
-        <button class="filter-tab" data-filter="retail">Retail</button>
-        <button class="filter-tab" data-filter="logistics">Logistics</button>
-        <button class="filter-tab" data-filter="education">Education</button>
-        <button class="filter-tab" data-filter="saas">SaaS</button>
-      </div>
-      <div class="portfolio-grid fade-in">
-        <div class="portfolio-item" data-category="finance">
-          <div class="portfolio-thumb finance">
-            <div class="portfolio-icon-wrap">
-              <svg class="portfolio-icon" aria-hidden="true"><use href="icons.svg#icon-currency"></use></svg>
-            </div>
-            <span class="portfolio-category">Finance</span>
-          </div>
-          <div class="portfolio-info">
-            <span class="tag">Finance</span>
-            <h3>FinEdge Trading Platform</h3>
-            <p>Real-time trading engine built on .NET and Azure for a leading fintech firm.</p>
-          </div>
-        </div>
-        <div class="portfolio-item" data-category="health">
-          <div class="portfolio-thumb health">
-            <div class="portfolio-icon-wrap">
-              <svg class="portfolio-icon" aria-hidden="true"><use href="icons.svg#icon-health"></use></svg>
-            </div>
-            <span class="portfolio-category">Healthcare</span>
-          </div>
-          <div class="portfolio-info">
-            <span class="tag">Healthcare</span>
-            <h3>HealthSync Patient Portal</h3>
-            <p>HIPAA-compliant telemedicine platform with React frontend and Node.js microservices architecture.</p>
-          </div>
-        </div>
-        <div class="portfolio-item" data-category="retail">
-          <div class="portfolio-thumb retail">
-            <div class="portfolio-icon-wrap">
-              <svg class="portfolio-icon" aria-hidden="true"><use href="icons.svg#icon-cart"></use></svg>
-            </div>
-            <span class="portfolio-category">Retail</span>
-          </div>
-          <div class="portfolio-info">
-            <span class="tag">Retail</span>
-            <h3>ShopWave Commerce Suite</h3>
-            <p>Headless e-commerce platform with AI-powered recommendations and omnichannel inventory sync.</p>
-          </div>
-        </div>
-        <div class="portfolio-item" data-category="logistics">
-          <div class="portfolio-thumb logistics">
-            <div class="portfolio-icon-wrap">
-              <svg class="portfolio-icon" aria-hidden="true"><use href="icons.svg#icon-truck"></use></svg>
-            </div>
-            <span class="portfolio-category">Logistics</span>
-          </div>
-          <div class="portfolio-info">
-            <span class="tag">Logistics</span>
-            <h3>LogiFlow Fleet Manager</h3>
-            <p>GPS tracking, route optimization, and automated dispatch system serving 500+ vehicles globally.</p>
-          </div>
-        </div>
-        <div class="portfolio-item" data-category="education">
-          <div class="portfolio-thumb education">
-            <div class="portfolio-icon-wrap">
-              <svg class="portfolio-icon" aria-hidden="true"><use href="icons.svg#icon-education"></use></svg>
-            </div>
-            <span class="portfolio-category">Education</span>
-          </div>
-          <div class="portfolio-info">
-            <span class="tag">Education</span>
-            <h3>EduNova LMS</h3>
-            <p>Cloud-native learning management system with live classes, assessments, and analytics dashboards.</p>
-          </div>
-        </div>
-        <div class="portfolio-item" data-category="saas">
+      <div class="portfolio-grid fade-in" style="grid-template-columns: 1fr; max-width: 720px; margin: 0 auto;">
+        <div class="portfolio-item">
           <div class="portfolio-thumb saas">
             <div class="portfolio-icon-wrap">
-              <svg class="portfolio-icon" aria-hidden="true"><use href="icons.svg#icon-chart"></use></svg>
+              <svg class="portfolio-icon" aria-hidden="true"><use href="icons.svg#icon-globe"></use></svg>
             </div>
-            <span class="portfolio-category">SaaS</span>
+            <span class="portfolio-category">URL Shortener</span>
           </div>
           <div class="portfolio-info">
-            <span class="tag">SaaS</span>
-            <h3>CloudMetrics Analytics</h3>
-            <p>Multi-tenant SaaS analytics platform with real-time dashboards and subscription billing on AWS.</p>
+            <span class="tag">2026 · Procellari</span>
+            <h3>Short links with click tracking</h3>
+            <p>Paste any URL. Get a short link you can share in chat, email, or print. Open the dashboard to see how many times each link was clicked and when the last visit happened.</p>
+            <p style="margin-top:1rem; color:var(--text-secondary); font-size:0.9rem; line-height:1.7;">Custom slugs when you want a readable path. Expiry dates for one-off campaigns. QR code export for posters and packaging. API access if you need to shorten links from your own app.</p>
+            <a href="contact.html" class="card-link" style="margin-top:1.25rem;">Request access →</a>
           </div>
+        </div>
+      </div>
+
+      <div class="card-grid card-grid-3 fade-in" style="margin-top:3rem;">
+        <div class="card">
+          <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-code"></use></svg></div>
+          <h3>Create links</h3>
+          <p>Drop in a destination URL. Pick a random short code or set your own slug if it's free.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-chart"></use></svg></div>
+          <h3>Track clicks</h3>
+          <p>Total clicks per link. Last-clicked timestamp. Enough for marketing checks without a full analytics suite.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-shield"></use></svg></div>
+          <h3>Stay in control</h3>
+          <p>Deactivate a link anytime. Set an expiry. Redirect still works until you turn it off.</p>
         </div>
       </div>
     </div>
@@ -157,9 +103,9 @@
   <section class="alt-bg">
     <div class="container fade-in">
       <div class="cta-banner">
-        <h2>Want Results Like These?</h2>
-        <p>Let's build something exceptional together. Share your vision and we'll bring it to life.</p>
-        <a href="contact.html" class="btn btn-primary">Start a Project</a>
+        <h2>Need this<br>for your team?</h2>
+        <p>We can host it for you, white-label it, or build a version that plugs into your existing login. Tell us how many links per month.</p>
+        <a href="contact.html" class="btn btn-primary">Talk to us</a>
       </div>
     </div>
   </section>
@@ -169,7 +115,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo"><span class="logo-name">Proc<span class="logo-accent">ellari</span></span></a>
-          <p>Procellari Pvt Ltd delivers premium IT solutions — custom software, cloud, AI, and digital transformation for enterprises worldwide.</p>
+          <p>Software studio in Ahmedabad. Backends, web apps, mobile, and cloud work. Founded 2026.</p>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -179,19 +125,17 @@
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
-          <a href="services.html">Custom Software</a>
-          <a href="services.html">Cloud Solutions</a>
-          <a href="services.html">AI Solutions</a>
-          <a href="services.html">DevOps</a>
+          <h4>Work</h4>
+          <a href="services.html">What we build</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="industries.html">Industries</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
           <a href="legal.html">Legal Center</a>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms &amp; Conditions</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="case-studies.html">Case Studies</a>
         </div>
       </div>
       <div class="footer-bottom">

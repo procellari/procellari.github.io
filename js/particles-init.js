@@ -14,9 +14,9 @@
       color: { value: ['#1E90FF', '#0057C8', '#4da3ff'] },
       shape: { type: 'circle' },
       opacity: {
-        value: 0.35,
+        value: 0.28,
         random: true,
-        anim: { enable: true, speed: 0.6, opacity_min: 0.12, sync: false }
+        anim: { enable: true, speed: 0.6, opacity_min: 0.08, sync: false }
       },
       size: {
         value: 2.5,
@@ -27,7 +27,7 @@
         enable: true,
         distance: isMobile ? 110 : 150,
         color: '#1E90FF',
-        opacity: 0.15,
+        opacity: 0.12,
         width: 1
       },
       move: {

@@ -10,9 +10,9 @@
   max-height: 520px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
-  background: linear-gradient(160deg, #0A1628 0%, #0D1B3E 50%, #0057C8 100%);
+  background: var(--gradient-media);
   overflow: hidden;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 48px rgba(13, 27, 62, 0.1);
 }
 
 .mg-player::before {
@@ -171,7 +171,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(10, 22, 40, 0.6);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(30, 144, 255, 0.2);
   font-family: var(--font-display);
   font-size: 0.85rem;
@@ -203,29 +203,29 @@
 .mg-step:nth-child(5) h4 { animation: mgStepText4 30s infinite; }
 
 @keyframes mgStepActive {
-  0%, 100% { background: rgba(10, 22, 40, 0.6); border-color: rgba(30, 144, 255, 0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
+  0%, 100% { background: rgba(255, 255, 255, 0.9); border-color: rgba(30, 144, 255, 0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
   5%, 20%  { background: rgba(0, 87, 200, 0.25); border-color: var(--accent-light); color: #fff; box-shadow: 0 0 24px rgba(30, 144, 255, 0.35); transform: scale(1.1); }
 }
 
 @keyframes mgStep1 {
-  0%, 18%   { background: rgba(10,22,40,0.6); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
+  0%, 18%   { background: rgba(255,255,255,0.9); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
   20%, 24%  { background: rgba(0,87,200,0.25); border-color: var(--accent-light); color: #fff; box-shadow: 0 0 24px rgba(30,144,255,0.35); transform: scale(1.1); }
-  26%, 100% { background: rgba(10,22,40,0.6); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
+  26%, 100% { background: rgba(255,255,255,0.9); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
 }
 @keyframes mgStep2 {
-  0%, 24%   { background: rgba(10,22,40,0.6); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
+  0%, 24%   { background: rgba(255,255,255,0.9); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
   26%, 30%  { background: rgba(0,87,200,0.25); border-color: var(--accent-light); color: #fff; box-shadow: 0 0 24px rgba(30,144,255,0.35); transform: scale(1.1); }
-  32%, 100% { background: rgba(10,22,40,0.6); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
+  32%, 100% { background: rgba(255,255,255,0.9); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
 }
 @keyframes mgStep3 {
-  0%, 30%   { background: rgba(10,22,40,0.6); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
+  0%, 30%   { background: rgba(255,255,255,0.9); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
   32%, 36%  { background: rgba(0,87,200,0.25); border-color: var(--accent-light); color: #fff; box-shadow: 0 0 24px rgba(30,144,255,0.35); transform: scale(1.1); }
-  38%, 100% { background: rgba(10,22,40,0.6); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
+  38%, 100% { background: rgba(255,255,255,0.9); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
 }
 @keyframes mgStep4 {
-  0%, 36%   { background: rgba(10,22,40,0.6); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
+  0%, 36%   { background: rgba(255,255,255,0.9); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
   38%, 42%  { background: rgba(0,87,200,0.25); border-color: var(--accent-light); color: #fff; box-shadow: 0 0 24px rgba(30,144,255,0.35); transform: scale(1.1); }
-  44%, 100% { background: rgba(10,22,40,0.6); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
+  44%, 100% { background: rgba(255,255,255,0.9); border-color: rgba(30,144,255,0.2); color: var(--text-muted); box-shadow: none; transform: scale(1); }
 }
 
 @keyframes mgStepText1 {
@@ -273,7 +273,7 @@
   align-items: center;
   gap: 0.6rem;
   padding: 1.25rem 0.75rem;
-  background: rgba(10, 22, 40, 0.5);
+  background: rgba(255, 255, 255, 0.88);
   border: 1px solid rgba(30, 144, 255, 0.15);
   border-radius: var(--radius);
   opacity: 0;
@@ -445,7 +445,7 @@
   height: 36px;
   border-radius: 50%;
   border: 1px solid var(--border);
-  background: rgba(10, 22, 40, 0.7);
+  background: rgba(255, 255, 255, 0.95);
   color: var(--text-primary);
   cursor: pointer;
   display: flex;
